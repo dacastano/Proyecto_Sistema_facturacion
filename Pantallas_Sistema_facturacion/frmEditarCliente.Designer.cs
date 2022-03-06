@@ -29,6 +29,7 @@ namespace Pantallas_Sistema_facturacion
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblTitulo = new MaterialSkin.Controls.MaterialLabel();
             this.txtIdCliente = new System.Windows.Forms.TextBox();
             this.txtNombre = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -38,6 +39,8 @@ namespace Pantallas_Sistema_facturacion
             this.txtEmail = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.btnActualizar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnSalir = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.MensajeError = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.MensajeError)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -49,9 +52,9 @@ namespace Pantallas_Sistema_facturacion
             this.lblTitulo.Location = new System.Drawing.Point(111, 29);
             this.lblTitulo.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(48, 19);
+            this.lblTitulo.Size = new System.Drawing.Size(151, 19);
             this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "Titulo";
+            this.lblTitulo.Text = "Actualizacion Cliente";
             // 
             // txtIdCliente
             // 
@@ -166,6 +169,10 @@ namespace Pantallas_Sistema_facturacion
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // MensajeError
+            // 
+            this.MensajeError.ContainerControl = this;
+            // 
             // frmEditarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -184,6 +191,7 @@ namespace Pantallas_Sistema_facturacion
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Actualizar Cliente";
             this.Load += new System.EventHandler(this.frmEditarCliente_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.MensajeError)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,5 +208,6 @@ namespace Pantallas_Sistema_facturacion
         private MaterialSkin.Controls.MaterialSingleLineTextField txtEmail;
         private MaterialSkin.Controls.MaterialRaisedButton btnActualizar;
         private MaterialSkin.Controls.MaterialRaisedButton btnSalir;
+        private System.Windows.Forms.ErrorProvider MensajeError;
     }
 }

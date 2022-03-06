@@ -1,8 +1,13 @@
 ﻿
+using System;
+using System.Data;
+using System.Windows.Forms;
+
 namespace Pantallas_Sistema_facturacion
 {
-    partial class frmListaClientes
+    partial class frmListaClientes 
     {
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -83,6 +88,7 @@ namespace Pantallas_Sistema_facturacion
             this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar Por Cliente";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnNuevo
             // 
@@ -162,6 +168,7 @@ namespace Pantallas_Sistema_facturacion
             this.btnSalir.TabIndex = 5;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // frmListaClientes
             // 

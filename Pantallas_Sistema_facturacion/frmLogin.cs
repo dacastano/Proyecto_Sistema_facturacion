@@ -25,10 +25,12 @@ namespace Pantallas_Sistema_facturacion
         private void btnValidar_Click(object sender, EventArgs e)
         {
             string respuesta = "";
-            if (txtUsuario.Text != "" && txtUsuario.Text != string.Empty)
+
+            if (txtUsuario.Text != "" && txtPassword.Text != string.Empty)
             {
-                if (txtUsuario.Text == "admin" && txtPassword.Text == "123")
-                    respuesta = "Javier Saldarriaga Cano";
+                    Acceso_datos Acceso = new Acceso_datos();
+
+                    respuesta = Acceso.ValidarUsuario(txtUsuario.Text, txtPassword.Text);
 
                 if (respuesta != "")
                 {
