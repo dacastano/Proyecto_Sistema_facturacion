@@ -66,7 +66,7 @@ namespace Pantallas_Sistema_facturacion
             // txtNombre
             // 
             this.txtNombre.Depth = 0;
-            this.txtNombre.Hint = "";
+            this.txtNombre.Hint = "Nombre Cliente";
             this.txtNombre.Location = new System.Drawing.Point(76, 130);
             this.txtNombre.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtNombre.Name = "txtNombre";
@@ -76,13 +76,12 @@ namespace Pantallas_Sistema_facturacion
             this.txtNombre.SelectionStart = 0;
             this.txtNombre.Size = new System.Drawing.Size(354, 23);
             this.txtNombre.TabIndex = 2;
-            this.txtNombre.Text = "Nombre Cliente";
             this.txtNombre.UseSystemPasswordChar = false;
             // 
             // txtDocumento
             // 
             this.txtDocumento.Depth = 0;
-            this.txtDocumento.Hint = "";
+            this.txtDocumento.Hint = "Documento";
             this.txtDocumento.Location = new System.Drawing.Point(76, 170);
             this.txtDocumento.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtDocumento.Name = "txtDocumento";
@@ -92,13 +91,12 @@ namespace Pantallas_Sistema_facturacion
             this.txtDocumento.SelectionStart = 0;
             this.txtDocumento.Size = new System.Drawing.Size(354, 23);
             this.txtDocumento.TabIndex = 3;
-            this.txtDocumento.Text = "Documento";
             this.txtDocumento.UseSystemPasswordChar = false;
             // 
             // txtDireccion
             // 
             this.txtDireccion.Depth = 0;
-            this.txtDireccion.Hint = "";
+            this.txtDireccion.Hint = "Dirección";
             this.txtDireccion.Location = new System.Drawing.Point(76, 214);
             this.txtDireccion.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtDireccion.Name = "txtDireccion";
@@ -108,13 +106,12 @@ namespace Pantallas_Sistema_facturacion
             this.txtDireccion.SelectionStart = 0;
             this.txtDireccion.Size = new System.Drawing.Size(354, 23);
             this.txtDireccion.TabIndex = 4;
-            this.txtDireccion.Text = "Dirección";
             this.txtDireccion.UseSystemPasswordChar = false;
             // 
             // txtTelefono
             // 
             this.txtTelefono.Depth = 0;
-            this.txtTelefono.Hint = "";
+            this.txtTelefono.Hint = "Telefono";
             this.txtTelefono.Location = new System.Drawing.Point(76, 257);
             this.txtTelefono.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtTelefono.Name = "txtTelefono";
@@ -124,13 +121,12 @@ namespace Pantallas_Sistema_facturacion
             this.txtTelefono.SelectionStart = 0;
             this.txtTelefono.Size = new System.Drawing.Size(354, 23);
             this.txtTelefono.TabIndex = 5;
-            this.txtTelefono.Text = "Telefono";
             this.txtTelefono.UseSystemPasswordChar = false;
             // 
             // txtEmail
             // 
             this.txtEmail.Depth = 0;
-            this.txtEmail.Hint = "";
+            this.txtEmail.Hint = "Email";
             this.txtEmail.Location = new System.Drawing.Point(76, 300);
             this.txtEmail.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtEmail.Name = "txtEmail";
@@ -140,7 +136,6 @@ namespace Pantallas_Sistema_facturacion
             this.txtEmail.SelectionStart = 0;
             this.txtEmail.Size = new System.Drawing.Size(354, 23);
             this.txtEmail.TabIndex = 6;
-            this.txtEmail.Text = "Email";
             this.txtEmail.UseSystemPasswordChar = false;
             // 
             // btnActualizar
