@@ -86,7 +86,7 @@ namespace Pantallas_Sistema_facturacion
             this.txtUsuario.SelectionLength = 0;
             this.txtUsuario.SelectionStart = 0;
             this.txtUsuario.Size = new System.Drawing.Size(200, 23);
-            this.txtUsuario.TabIndex = 2;
+            this.txtUsuario.TabIndex = 1;
             this.txtUsuario.UseSystemPasswordChar = false;
             // 
             // txtPassword
@@ -101,7 +101,7 @@ namespace Pantallas_Sistema_facturacion
             this.txtPassword.SelectionLength = 0;
             this.txtPassword.SelectionStart = 0;
             this.txtPassword.Size = new System.Drawing.Size(200, 23);
-            this.txtPassword.TabIndex = 3;
+            this.txtPassword.TabIndex = 2;
             this.txtPassword.UseSystemPasswordChar = false;
             // 
             // btnValidar
@@ -112,7 +112,7 @@ namespace Pantallas_Sistema_facturacion
             this.btnValidar.Name = "btnValidar";
             this.btnValidar.Primary = true;
             this.btnValidar.Size = new System.Drawing.Size(113, 35);
-            this.btnValidar.TabIndex = 4;
+            this.btnValidar.TabIndex = 3;
             this.btnValidar.Text = "Validar";
             this.btnValidar.UseVisualStyleBackColor = true;
             this.btnValidar.Click += new System.EventHandler(this.btnValidar_Click);
@@ -125,7 +125,7 @@ namespace Pantallas_Sistema_facturacion
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Primary = true;
             this.btnCancelar.Size = new System.Drawing.Size(113, 35);
-            this.btnCancelar.TabIndex = 5;
+            this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
