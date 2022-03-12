@@ -43,7 +43,7 @@ namespace Pantallas_Sistema_facturacion
             // btnSalir
             // 
             this.btnSalir.Depth = 0;
-            this.btnSalir.Location = new System.Drawing.Point(782, 344);
+            this.btnSalir.Location = new System.Drawing.Point(437, 263);
             this.btnSalir.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Primary = true;
@@ -55,7 +55,7 @@ namespace Pantallas_Sistema_facturacion
             // btnEliminar
             // 
             this.btnEliminar.Depth = 0;
-            this.btnEliminar.Location = new System.Drawing.Point(782, 196);
+            this.btnEliminar.Location = new System.Drawing.Point(437, 183);
             this.btnEliminar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Primary = true;
@@ -67,7 +67,7 @@ namespace Pantallas_Sistema_facturacion
             // btnActualizar
             // 
             this.btnActualizar.Depth = 0;
-            this.btnActualizar.Location = new System.Drawing.Point(782, 138);
+            this.btnActualizar.Location = new System.Drawing.Point(437, 125);
             this.btnActualizar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Primary = true;
@@ -79,7 +79,7 @@ namespace Pantallas_Sistema_facturacion
             // btnNuevo
             // 
             this.btnNuevo.Depth = 0;
-            this.btnNuevo.Location = new System.Drawing.Point(782, 84);
+            this.btnNuevo.Location = new System.Drawing.Point(437, 71);
             this.btnNuevo.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Primary = true;
@@ -91,7 +91,7 @@ namespace Pantallas_Sistema_facturacion
             // btnBuscar
             // 
             this.btnBuscar.Depth = 0;
-            this.btnBuscar.Location = new System.Drawing.Point(512, 259);
+            this.btnBuscar.Location = new System.Drawing.Point(301, 166);
             this.btnBuscar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Primary = true;
@@ -99,19 +99,20 @@ namespace Pantallas_Sistema_facturacion
             this.btnBuscar.TabIndex = 28;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
             // txtBuscarCategoria
             // 
             this.txtBuscarCategoria.Depth = 0;
-            this.txtBuscarCategoria.Hint = "Buscar Categoria";
-            this.txtBuscarCategoria.Location = new System.Drawing.Point(57, 268);
+            this.txtBuscarCategoria.Hint = "Buscar Categoria por ID";
+            this.txtBuscarCategoria.Location = new System.Drawing.Point(37, 175);
             this.txtBuscarCategoria.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtBuscarCategoria.Name = "txtBuscarCategoria";
             this.txtBuscarCategoria.PasswordChar = '\0';
             this.txtBuscarCategoria.SelectedText = "";
             this.txtBuscarCategoria.SelectionLength = 0;
             this.txtBuscarCategoria.SelectionStart = 0;
-            this.txtBuscarCategoria.Size = new System.Drawing.Size(449, 23);
+            this.txtBuscarCategoria.Size = new System.Drawing.Size(258, 23);
             this.txtBuscarCategoria.TabIndex = 24;
             this.txtBuscarCategoria.UseSystemPasswordChar = false;
             // 
@@ -151,18 +152,18 @@ namespace Pantallas_Sistema_facturacion
             this.lblTitulo.Depth = 0;
             this.lblTitulo.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblTitulo.Location = new System.Drawing.Point(252, 30);
+            this.lblTitulo.Location = new System.Drawing.Point(36, 34);
             this.lblTitulo.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(204, 19);
+            this.lblTitulo.Size = new System.Drawing.Size(167, 19);
             this.lblTitulo.TabIndex = 17;
-            this.lblTitulo.Text = "Administracion de Productos";
+            this.lblTitulo.Text = "Categoria de Productos";
             // 
             // frmCategoriaProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1001, 498);
+            this.ClientSize = new System.Drawing.Size(569, 365);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnActualizar);
@@ -173,6 +174,7 @@ namespace Pantallas_Sistema_facturacion
             this.Controls.Add(this.txtCodigoCategoria);
             this.Controls.Add(this.lblTitulo);
             this.Name = "frmCategoriaProductos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCategoriaProductos";
             this.ResumeLayout(false);
             this.PerformLayout();
