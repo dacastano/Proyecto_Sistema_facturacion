@@ -29,6 +29,7 @@ namespace Pantallas_Sistema_facturacion
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnSalir = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnEliminar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnActualizar = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -38,6 +39,8 @@ namespace Pantallas_Sistema_facturacion
             this.txtNombreCategoria = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtCodigoCategoria = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.lblTitulo = new MaterialSkin.Controls.MaterialLabel();
+            this.MensajeError = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.MensajeError)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalir
@@ -63,6 +66,7 @@ namespace Pantallas_Sistema_facturacion
             this.btnEliminar.TabIndex = 31;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnActualizar
             // 
@@ -87,6 +91,7 @@ namespace Pantallas_Sistema_facturacion
             this.btnNuevo.TabIndex = 29;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnBuscar
             // 
@@ -159,6 +164,10 @@ namespace Pantallas_Sistema_facturacion
             this.lblTitulo.TabIndex = 17;
             this.lblTitulo.Text = "Categoria de Productos";
             // 
+            // MensajeError
+            // 
+            this.MensajeError.ContainerControl = this;
+            // 
             // frmCategoriaProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -176,6 +185,7 @@ namespace Pantallas_Sistema_facturacion
             this.Name = "frmCategoriaProductos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCategoriaProductos";
+            ((System.ComponentModel.ISupportInitialize)(this.MensajeError)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,5 +202,6 @@ namespace Pantallas_Sistema_facturacion
         private MaterialSkin.Controls.MaterialSingleLineTextField txtNombreCategoria;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtCodigoCategoria;
         private MaterialSkin.Controls.MaterialLabel lblTitulo;
+        private System.Windows.Forms.ErrorProvider MensajeError;
     }
 }
