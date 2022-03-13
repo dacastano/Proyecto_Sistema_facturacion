@@ -29,6 +29,7 @@ namespace Pantallas_Sistema_facturacion
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblTitulo = new MaterialSkin.Controls.MaterialLabel();
             this.txtProducto = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtCodReferencia = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -52,6 +53,9 @@ namespace Pantallas_Sistema_facturacion
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
+            this.MensajeError = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtBxProductID = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.MensajeError)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -226,21 +230,22 @@ namespace Pantallas_Sistema_facturacion
             this.btnNuevo.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Primary = true;
-            this.btnNuevo.Size = new System.Drawing.Size(103, 32);
+            this.btnNuevo.Size = new System.Drawing.Size(103, 48);
             this.btnNuevo.TabIndex = 13;
-            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.Text = "Nuevo\r\n/Actualizar";
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnActualizar
             // 
             this.btnActualizar.Depth = 0;
-            this.btnActualizar.Location = new System.Drawing.Point(790, 127);
+            this.btnActualizar.Location = new System.Drawing.Point(790, 131);
             this.btnActualizar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Primary = true;
             this.btnActualizar.Size = new System.Drawing.Size(103, 32);
             this.btnActualizar.TabIndex = 14;
-            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.Text = "Actualizar\r\n(Deprecated)";
             this.btnActualizar.UseVisualStyleBackColor = true;
             // 
             // btnEliminar
@@ -254,6 +259,7 @@ namespace Pantallas_Sistema_facturacion
             this.btnEliminar.TabIndex = 15;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnSalir
             // 
@@ -266,11 +272,12 @@ namespace Pantallas_Sistema_facturacion
             this.btnSalir.TabIndex = 16;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // cBxDescripcionCategoria
             // 
             this.cBxDescripcionCategoria.FormattingEnabled = true;
-            this.cBxDescripcionCategoria.Location = new System.Drawing.Point(572, 71);
+            this.cBxDescripcionCategoria.Location = new System.Drawing.Point(571, 71);
             this.cBxDescripcionCategoria.Name = "cBxDescripcionCategoria";
             this.cBxDescripcionCategoria.Size = new System.Drawing.Size(171, 21);
             this.cBxDescripcionCategoria.TabIndex = 17;
@@ -353,11 +360,23 @@ namespace Pantallas_Sistema_facturacion
             this.materialLabel6.TabIndex = 23;
             this.materialLabel6.Text = "Ruta Imagen:";
             // 
+            // MensajeError
+            // 
+            this.MensajeError.ContainerControl = this;
+            // 
+            // txtBxProductID
+            // 
+            this.txtBxProductID.Location = new System.Drawing.Point(27, 50);
+            this.txtBxProductID.Name = "txtBxProductID";
+            this.txtBxProductID.Size = new System.Drawing.Size(43, 20);
+            this.txtBxProductID.TabIndex = 24;
+            // 
             // frmAdministracionProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(919, 422);
+            this.Controls.Add(this.txtBxProductID);
             this.Controls.Add(this.materialLabel6);
             this.Controls.Add(this.materialLabel5);
             this.Controls.Add(this.materialLabel3);
@@ -383,6 +402,7 @@ namespace Pantallas_Sistema_facturacion
             this.Controls.Add(this.lblTitulo);
             this.Name = "frmAdministracionProductos";
             this.Text = "frmAdministracionProductos";
+            ((System.ComponentModel.ISupportInitialize)(this.MensajeError)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -413,5 +433,7 @@ namespace Pantallas_Sistema_facturacion
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
         private MaterialSkin.Controls.MaterialLabel materialLabel5;
         private MaterialSkin.Controls.MaterialLabel materialLabel6;
+        private System.Windows.Forms.ErrorProvider MensajeError;
+        private System.Windows.Forms.TextBox txtBxProductID;
     }
 }
