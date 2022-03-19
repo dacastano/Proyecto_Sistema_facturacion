@@ -50,6 +50,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Acceso_datos.cs" />
+    <Compile Include="frmAcercaDe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAcercaDe.Designer.cs">
+      <DependentUpon>frmAcercaDe.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAdminEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,12 @@
     <Compile Include="frmAdministracionProductos.Designer.cs">
       <DependentUpon>frmAdministracionProductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAyuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAyuda.Designer.cs">
+      <DependentUpon>frmAyuda.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCategoriaProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +91,12 @@
     </Compile>
     <Compile Include="frmEditarCliente.Designer.cs">
       <DependentUpon>frmEditarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditarFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditarFactura.Designer.cs">
+      <DependentUpon>frmEditarFactura.cs</DependentUpon>
     </Compile>
     <Compile Include="frmInformes.cs">
       <SubType>Form</SubType>
@@ -123,6 +141,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>__DBFACTURAS_DataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmAcercaDe.resx">
+      <DependentUpon>frmAcercaDe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAdminEmpleados.resx">
       <DependentUpon>frmAdminEmpleados.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,11 +153,17 @@
     <EmbeddedResource Include="frmAdministracionProductos.resx">
       <DependentUpon>frmAdministracionProductos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAyuda.resx">
+      <DependentUpon>frmAyuda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCategoriaProductos.resx">
       <DependentUpon>frmCategoriaProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEditarCliente.resx">
       <DependentUpon>frmEditarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditarFactura.resx">
+      <DependentUpon>frmEditarFactura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInformes.resx">
       <DependentUpon>frmInformes.cs</DependentUpon>
