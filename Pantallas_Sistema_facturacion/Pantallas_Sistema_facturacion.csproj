@@ -92,11 +92,11 @@
     <Compile Include="frmEditarCliente.Designer.cs">
       <DependentUpon>frmEditarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEditarFactura.cs">
+    <Compile Include="frmAnadirFactura.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEditarFactura.Designer.cs">
-      <DependentUpon>frmEditarFactura.cs</DependentUpon>
+    <Compile Include="frmAnadirFactura.Designer.cs">
+      <DependentUpon>frmAnadirFactura.cs</DependentUpon>
     </Compile>
     <Compile Include="frmInformes.cs">
       <SubType>Form</SubType>
@@ -162,8 +162,8 @@
     <EmbeddedResource Include="frmEditarCliente.resx">
       <DependentUpon>frmEditarCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEditarFactura.resx">
-      <DependentUpon>frmEditarFactura.cs</DependentUpon>
+    <EmbeddedResource Include="frmAnadirFactura.resx">
+      <DependentUpon>frmAnadirFactura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInformes.resx">
       <DependentUpon>frmInformes.cs</DependentUpon>

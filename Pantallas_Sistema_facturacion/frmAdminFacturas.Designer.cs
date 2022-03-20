@@ -31,26 +31,16 @@ namespace Pantallas_Sistema_facturacion
         {
             this.btnSalir = new MaterialSkin.Controls.MaterialRaisedButton();
             this.dgFacturas = new System.Windows.Forms.DataGridView();
+            this.btnBuscar = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.txtBuscar = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.lblTitulo = new MaterialSkin.Controls.MaterialLabel();
             this.numFactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CLIENTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EMISION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VALOR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ESTADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnEditar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnNuevaFactura = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.btnBuscar = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.txtBuscar = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.lblTitulo = new MaterialSkin.Controls.MaterialLabel();
-            this.txtBxNumFactura = new System.Windows.Forms.TextBox();
-            this.txtBxIdCliente = new System.Windows.Forms.TextBox();
-            this.txtBxValor = new System.Windows.Forms.TextBox();
-            this.txtEstado = new System.Windows.Forms.TextBox();
-            this.dtmAsofToday = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.btnBorrar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnNuevo = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgFacturas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,58 +66,13 @@ namespace Pantallas_Sistema_facturacion
             this.EMISION,
             this.VALOR,
             this.ESTADO,
-            this.btnEditar});
+            this.btnBorrar,
+            this.btnNuevo});
             this.dgFacturas.Location = new System.Drawing.Point(35, 112);
             this.dgFacturas.Name = "dgFacturas";
             this.dgFacturas.Size = new System.Drawing.Size(789, 208);
             this.dgFacturas.TabIndex = 10;
             this.dgFacturas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgFacturas_CellContentClick);
-            // 
-            // numFactura
-            // 
-            this.numFactura.HeaderText = "NRO. FACTURA";
-            this.numFactura.Name = "numFactura";
-            // 
-            // CLIENTE
-            // 
-            this.CLIENTE.HeaderText = "CLIENTE";
-            this.CLIENTE.Name = "CLIENTE";
-            // 
-            // EMISION
-            // 
-            this.EMISION.HeaderText = "EMISION";
-            this.EMISION.Name = "EMISION";
-            // 
-            // VALOR
-            // 
-            this.VALOR.HeaderText = "VALOR";
-            this.VALOR.Name = "VALOR";
-            // 
-            // ESTADO
-            // 
-            this.ESTADO.HeaderText = "ESTADO";
-            this.ESTADO.Name = "ESTADO";
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.HeaderText = "EDITAR";
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Text = "EDITAR";
-            this.btnEditar.UseColumnTextForButtonValue = true;
-            this.btnEditar.Width = 80;
-            // 
-            // btnNuevaFactura
-            // 
-            this.btnNuevaFactura.Depth = 0;
-            this.btnNuevaFactura.Location = new System.Drawing.Point(498, 370);
-            this.btnNuevaFactura.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnNuevaFactura.Name = "btnNuevaFactura";
-            this.btnNuevaFactura.Primary = true;
-            this.btnNuevaFactura.Size = new System.Drawing.Size(92, 33);
-            this.btnNuevaFactura.TabIndex = 9;
-            this.btnNuevaFactura.Text = "Nueva Factura";
-            this.btnNuevaFactura.UseVisualStyleBackColor = true;
-            this.btnNuevaFactura.Click += new System.EventHandler(this.btnNuevaFactura_Click);
             // 
             // btnBuscar
             // 
@@ -170,104 +115,54 @@ namespace Pantallas_Sistema_facturacion
             this.lblTitulo.TabIndex = 6;
             this.lblTitulo.Text = "Administracion de Facturas";
             // 
-            // txtBxNumFactura
+            // numFactura
             // 
-            this.txtBxNumFactura.Location = new System.Drawing.Point(35, 353);
-            this.txtBxNumFactura.Name = "txtBxNumFactura";
-            this.txtBxNumFactura.Size = new System.Drawing.Size(100, 20);
-            this.txtBxNumFactura.TabIndex = 12;
+            this.numFactura.HeaderText = "NRO. FACTURA";
+            this.numFactura.Name = "numFactura";
             // 
-            // txtBxIdCliente
+            // CLIENTE
             // 
-            this.txtBxIdCliente.Location = new System.Drawing.Point(151, 353);
-            this.txtBxIdCliente.Name = "txtBxIdCliente";
-            this.txtBxIdCliente.Size = new System.Drawing.Size(100, 20);
-            this.txtBxIdCliente.TabIndex = 13;
+            this.CLIENTE.HeaderText = "CLIENTE";
+            this.CLIENTE.Name = "CLIENTE";
             // 
-            // txtBxValor
+            // EMISION
             // 
-            this.txtBxValor.Location = new System.Drawing.Point(98, 408);
-            this.txtBxValor.Name = "txtBxValor";
-            this.txtBxValor.Size = new System.Drawing.Size(100, 20);
-            this.txtBxValor.TabIndex = 15;
+            this.EMISION.HeaderText = "EMISION";
+            this.EMISION.Name = "EMISION";
             // 
-            // txtEstado
+            // VALOR
             // 
-            this.txtEstado.Location = new System.Drawing.Point(243, 408);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(100, 20);
-            this.txtEstado.TabIndex = 16;
+            this.VALOR.HeaderText = "VALOR";
+            this.VALOR.Name = "VALOR";
             // 
-            // dtmAsofToday
+            // ESTADO
             // 
-            this.dtmAsofToday.Location = new System.Drawing.Point(258, 353);
-            this.dtmAsofToday.Name = "dtmAsofToday";
-            this.dtmAsofToday.Size = new System.Drawing.Size(208, 20);
-            this.dtmAsofToday.TabIndex = 17;
+            this.ESTADO.HeaderText = "ESTADO";
+            this.ESTADO.Name = "ESTADO";
             // 
-            // label1
+            // btnBorrar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 337);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 13);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "# Factura";
+            this.btnBorrar.HeaderText = "BORRAR";
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Text = "BORRAR";
+            this.btnBorrar.UseColumnTextForButtonValue = true;
+            this.btnBorrar.Width = 80;
             // 
-            // label2
+            // btnNuevo
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(148, 337);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 13);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "Id Cliente";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(255, 337);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 13);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "Fecha Emisión";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(95, 390);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(31, 13);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "Valor";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(240, 390);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 13);
-            this.label5.TabIndex = 22;
-            this.label5.Text = "Estado";
+            this.btnNuevo.HeaderText = "NUEVO";
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Text = "NUEVO";
+            this.btnNuevo.UseColumnTextForButtonValue = true;
+            this.btnNuevo.Width = 80;
             // 
             // frmAdminFacturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(855, 453);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.dtmAsofToday);
-            this.Controls.Add(this.txtEstado);
-            this.Controls.Add(this.txtBxValor);
-            this.Controls.Add(this.txtBxIdCliente);
-            this.Controls.Add(this.txtBxNumFactura);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.dgFacturas);
-            this.Controls.Add(this.btnNuevaFactura);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.lblTitulo);
@@ -284,7 +179,6 @@ namespace Pantallas_Sistema_facturacion
 
         private MaterialSkin.Controls.MaterialRaisedButton btnSalir;
         private System.Windows.Forms.DataGridView dgFacturas;
-        private MaterialSkin.Controls.MaterialRaisedButton btnNuevaFactura;
         private MaterialSkin.Controls.MaterialRaisedButton btnBuscar;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtBuscar;
         private MaterialSkin.Controls.MaterialLabel lblTitulo;
@@ -293,16 +187,7 @@ namespace Pantallas_Sistema_facturacion
         private System.Windows.Forms.DataGridViewTextBoxColumn EMISION;
         private System.Windows.Forms.DataGridViewTextBoxColumn VALOR;
         private System.Windows.Forms.DataGridViewTextBoxColumn ESTADO;
-        private System.Windows.Forms.DataGridViewButtonColumn btnEditar;
-        private System.Windows.Forms.TextBox txtBxNumFactura;
-        private System.Windows.Forms.TextBox txtBxIdCliente;
-        private System.Windows.Forms.TextBox txtBxValor;
-        private System.Windows.Forms.TextBox txtEstado;
-        private System.Windows.Forms.DateTimePicker dtmAsofToday;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridViewButtonColumn btnBorrar;
+        private System.Windows.Forms.DataGridViewButtonColumn btnNuevo;
     }
 }

@@ -17,6 +17,7 @@ namespace Pantallas_Sistema_facturacion
             InitializeComponent();
         }
 
+        public int IdFactura { get; set; }
         public string DtmFecha { get; set; }
 
         DataTable dt = new DataTable();
@@ -39,19 +40,14 @@ namespace Pantallas_Sistema_facturacion
             llenar_Grid();
         }
 
-        private void btnNuevaFactura_Click(object sender, EventArgs e)
-        {
-            //need pop up for facturas
-        }
-
         private void dgFacturas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgFacturas.Columns[e.ColumnIndex].Name == "btnEditar")
+            if (dgFacturas.Columns[e.ColumnIndex].Name == "btnNuevo")
             {
                 int posActual = dgFacturas.CurrentRow.Index;
-                //frmEditarCliente Cliente = new frmEditarCliente();
-                //Cliente.IdFa = int.Parse(dgFacturas[0, posActual].Value.ToString());
-                //Cliente.ShowDialog();
+                frmAnadirFactura FacturaEdit = new frmAnadirFactura();
+                FacturaEdit.IdFactura = int.Parse(dgFacturas[0, posActual].Value.ToString());
+                FacturaEdit.ShowDialog();
             }
             llenar_Grid();
         }
