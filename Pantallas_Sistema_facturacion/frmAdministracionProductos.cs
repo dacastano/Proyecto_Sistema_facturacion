@@ -28,7 +28,7 @@ namespace Pantallas_Sistema_facturacion
         {
             if (txtBuscarProducto.Text == "")
             {
-                MessageBox.Show("Ingreso un nombre de producto válido");
+                MessageBox.Show("Ingrese un nombre de producto válido");
             }
             else
             {

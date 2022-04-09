@@ -91,5 +91,17 @@ namespace Pantallas_Sistema_facturacion
             frmSeguridad Seguridad = new frmSeguridad();
             AbrirForm(Seguridad);
         }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            frmAyuda Ayuda = new frmAyuda();
+            AbrirForm(Ayuda);
+        }
+
+        private void btnAcerca_Click(object sender, EventArgs e)
+        {
+            frmAcercaDe Acerca = new frmAcercaDe();
+            AbrirForm(Acerca);
+        }
     }
 }

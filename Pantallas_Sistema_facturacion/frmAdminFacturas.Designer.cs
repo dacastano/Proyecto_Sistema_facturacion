@@ -30,8 +30,7 @@ namespace Pantallas_Sistema_facturacion
         private void InitializeComponent()
         {
             this.btnSalir = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.dgClientes = new System.Windows.Forms.DataGridView();
-            this.btnNuevaFactura = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.dgFacturas = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.txtBuscar = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.lblTitulo = new MaterialSkin.Controls.MaterialLabel();
@@ -40,15 +39,15 @@ namespace Pantallas_Sistema_facturacion
             this.EMISION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VALOR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ESTADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnEditar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).BeginInit();
+            this.btnBorrar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnNuevo = new System.Windows.Forms.DataGridViewButtonColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgFacturas)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalir
             // 
             this.btnSalir.Depth = 0;
-            this.btnSalir.Location = new System.Drawing.Point(652, 357);
+            this.btnSalir.Location = new System.Drawing.Point(717, 395);
             this.btnSalir.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Primary = true;
@@ -56,33 +55,24 @@ namespace Pantallas_Sistema_facturacion
             this.btnSalir.TabIndex = 11;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // dgClientes
+            // dgFacturas
             // 
-            this.dgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgFacturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgFacturas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.numFactura,
             this.CLIENTE,
             this.EMISION,
             this.VALOR,
             this.ESTADO,
-            this.btnEditar});
-            this.dgClientes.Location = new System.Drawing.Point(35, 120);
-            this.dgClientes.Name = "dgClientes";
-            this.dgClientes.Size = new System.Drawing.Size(789, 208);
-            this.dgClientes.TabIndex = 10;
-            // 
-            // btnNuevaFactura
-            // 
-            this.btnNuevaFactura.Depth = 0;
-            this.btnNuevaFactura.Location = new System.Drawing.Point(652, 73);
-            this.btnNuevaFactura.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnNuevaFactura.Name = "btnNuevaFactura";
-            this.btnNuevaFactura.Primary = true;
-            this.btnNuevaFactura.Size = new System.Drawing.Size(92, 33);
-            this.btnNuevaFactura.TabIndex = 9;
-            this.btnNuevaFactura.Text = "Nueva Factura";
-            this.btnNuevaFactura.UseVisualStyleBackColor = true;
+            this.btnBorrar,
+            this.btnNuevo});
+            this.dgFacturas.Location = new System.Drawing.Point(35, 112);
+            this.dgFacturas.Name = "dgFacturas";
+            this.dgFacturas.Size = new System.Drawing.Size(789, 208);
+            this.dgFacturas.TabIndex = 10;
+            this.dgFacturas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgFacturas_CellContentClick);
             // 
             // btnBuscar
             // 
@@ -93,8 +83,9 @@ namespace Pantallas_Sistema_facturacion
             this.btnBuscar.Primary = true;
             this.btnBuscar.Size = new System.Drawing.Size(92, 33);
             this.btnBuscar.TabIndex = 8;
-            this.btnBuscar.Text = "Buscar Por Cliente";
+            this.btnBuscar.Text = "Buscar Por # Factura";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtBuscar
             // 
@@ -149,36 +140,36 @@ namespace Pantallas_Sistema_facturacion
             this.ESTADO.HeaderText = "ESTADO";
             this.ESTADO.Name = "ESTADO";
             // 
-            // btnEditar
+            // btnBorrar
             // 
-            this.btnEditar.HeaderText = "EDITAR";
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Text = "EDITAR";
-            this.btnEditar.UseColumnTextForButtonValue = true;
-            this.btnEditar.Width = 80;
+            this.btnBorrar.HeaderText = "BORRAR";
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Text = "BORRAR";
+            this.btnBorrar.UseColumnTextForButtonValue = true;
+            this.btnBorrar.Width = 80;
             // 
-            // textBox1
+            // btnNuevo
             // 
-            this.textBox1.Location = new System.Drawing.Point(652, 39);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 12;
+            this.btnNuevo.HeaderText = "NUEVO";
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Text = "NUEVO";
+            this.btnNuevo.UseColumnTextForButtonValue = true;
+            this.btnNuevo.Width = 80;
             // 
             // frmAdminFacturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(855, 453);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.dgClientes);
-            this.Controls.Add(this.btnNuevaFactura);
+            this.Controls.Add(this.dgFacturas);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.lblTitulo);
             this.Name = "frmAdminFacturas";
             this.Text = "frmAdminFacturas";
-            ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).EndInit();
+            this.Load += new System.EventHandler(this.frmAdminFacturas_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgFacturas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,8 +178,7 @@ namespace Pantallas_Sistema_facturacion
         #endregion
 
         private MaterialSkin.Controls.MaterialRaisedButton btnSalir;
-        private System.Windows.Forms.DataGridView dgClientes;
-        private MaterialSkin.Controls.MaterialRaisedButton btnNuevaFactura;
+        private System.Windows.Forms.DataGridView dgFacturas;
         private MaterialSkin.Controls.MaterialRaisedButton btnBuscar;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtBuscar;
         private MaterialSkin.Controls.MaterialLabel lblTitulo;
@@ -197,7 +187,7 @@ namespace Pantallas_Sistema_facturacion
         private System.Windows.Forms.DataGridViewTextBoxColumn EMISION;
         private System.Windows.Forms.DataGridViewTextBoxColumn VALOR;
         private System.Windows.Forms.DataGridViewTextBoxColumn ESTADO;
-        private System.Windows.Forms.DataGridViewButtonColumn btnEditar;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridViewButtonColumn btnBorrar;
+        private System.Windows.Forms.DataGridViewButtonColumn btnNuevo;
     }
 }
