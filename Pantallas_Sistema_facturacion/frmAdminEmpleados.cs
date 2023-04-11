@@ -15,19 +15,6 @@ namespace Pantallas_Sistema_facturacion
         public frmAdminEmpleados()
         {
             InitializeComponent();
-            fill_EmployeeCombo();
-        }
-
-        private void fill_EmployeeCombo()
-        {
-            DataTable dt = new DataTable();
-            Acceso_datos acceso = new Acceso_datos();
-            dt = acceso.cargarTabla("TBLEMPLEADO", "");
-
-            cboEmpleado.DataSource = dt;
-            cboEmpleado.DisplayMember = "strNombre";
-            cboEmpleado.ValueMember = "IdEmpleado";
-            acceso.CerrarrBd();
         }
     }
 }

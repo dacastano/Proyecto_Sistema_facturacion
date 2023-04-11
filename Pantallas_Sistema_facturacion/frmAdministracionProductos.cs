@@ -15,21 +15,14 @@ namespace Pantallas_Sistema_facturacion
         public frmAdministracionProductos()
         {
             InitializeComponent();
-            fill_categorycombo();
         }
 
         public int IdProducto { get; set; }
         public int IdCategoria { get; set; }
 
         DataTable dt = new DataTable();
+        DataTable dt2 = new DataTable();
         Acceso_datos acceso = new Acceso_datos();
-
-        private void fill_categorycombo()
-        {
-            dt = acceso.cargarTabla("tblcategoria_prod", "");
-            cBxDescripcionCategoria.DataSource = dt;
-            cBxDescripcionCategoria.ValueMember = "idcategoria";
-        }
 
         private void fill_ProductFields()
         {
@@ -77,6 +70,12 @@ namespace Pantallas_Sistema_facturacion
             return borrado;
         }
 
+        ////Tengo un problema con ALTER TABLE [dbo].[TBLPRODUCTO]  WITH CHECK ADD  CONSTRAINT [FK__TBLPRODUC__IdCat__440B1D61] FOREIGN KEY([IdCategoria])
+        //REFERENCES[dbo].[TBLCATEGORIA_PROD]
+        //([IdCategoria])
+        //GO
+        //ALTER TABLE[dbo].[TBLPRODUCTO]
+        //CHECK CONSTRAINT[FK__TBLPRODUC__IdCat__440B1D61]
         public bool Anadir_ActualizarProducto()
         {
             Boolean actualizado = false;
@@ -85,7 +84,7 @@ namespace Pantallas_Sistema_facturacion
                 try
                 {
                     Acceso_datos Acceso = new Acceso_datos();
-                    string sentencia = $"Exec [actualizar_Producto] {IdProducto},'{txtProducto.Text}',{txtCodReferencia.Text} ,'{txtPrecioCompra.Text}','{txtPrecioVenta.Text}', '{cBxDescripcionCategoria.Text}', '{txtBxDetallesProducto.Text}', '{txtRutaImagen.Text}', '{txtCantidadStock.Text}', '{DateTime.Now.ToShortDateString()}', 'Javier'";
+                    string sentencia = $"Exec [actualizar_Producto] {IdProducto},'{txtProducto.Text}',{txtCodReferencia.Text} ,'{txtPrecioCompra.Text}','{txtPrecioVenta.Text}',{IdCategoria}, '{txtBxDetallesProducto.Text}', '{txtRutaImagen.Text}', '{txtCantidadStock.Text}', '{DateTime.Now.ToShortDateString()}', 'Javier'";
                     MessageBox.Show(Acceso.EjecutarComando(sentencia));
                     actualizado = true;
                 }
