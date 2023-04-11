@@ -46,7 +46,7 @@ namespace Pantallas_Sistema_facturacion
             this.lblTitulo = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboEmpleado = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
@@ -274,13 +274,13 @@ namespace Pantallas_Sistema_facturacion
             this.materialLabel2.TabIndex = 34;
             this.materialLabel2.Text = "Detalles Adicionales";
             // 
-            // comboBox1
+            // cboEmpleado
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(519, 79);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 35;
+            this.cboEmpleado.FormattingEnabled = true;
+            this.cboEmpleado.Location = new System.Drawing.Point(519, 79);
+            this.cboEmpleado.Name = "cboEmpleado";
+            this.cboEmpleado.Size = new System.Drawing.Size(121, 21);
+            this.cboEmpleado.TabIndex = 35;
             // 
             // dateTimePicker1
             // 
@@ -303,7 +303,7 @@ namespace Pantallas_Sistema_facturacion
             this.ClientSize = new System.Drawing.Size(830, 556);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cboEmpleado);
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.btnSalir);
@@ -347,7 +347,7 @@ namespace Pantallas_Sistema_facturacion
         private MaterialSkin.Controls.MaterialLabel lblTitulo;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboEmpleado;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
     }
