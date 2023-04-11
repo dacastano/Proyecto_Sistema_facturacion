@@ -84,7 +84,7 @@ namespace Pantallas_Sistema_facturacion
                 try
                 {
                     Acceso_datos Acceso = new Acceso_datos();
-                    string sentencia = $"Exec [actualizar_Producto] {IdProducto},'{txtProducto.Text}',{txtCodReferencia.Text} ,'{txtPrecioCompra.Text}','{txtPrecioVenta.Text}',{IdCategoria}, '{txtBxDetallesProducto.Text}', '{txtRutaImagen.Text}', '{txtCantidadStock.Text}', '{DateTime.Now.ToShortDateString()}', 'Javier'";
+                    string sentencia = $"Exec [actualizar_Producto] {IdProducto},'{txtProducto.Text}',{txtCodReferencia.Text} ,'{txtPrecioCompra.Text}','{txtPrecioVenta.Text}', '{cBxDescripcionCategoria.Text}', '{txtBxDetallesProducto.Text}', '{txtRutaImagen.Text}', '{txtCantidadStock.Text}', '{DateTime.Now.ToShortDateString()}', 'Javier'";
                     MessageBox.Show(Acceso.EjecutarComando(sentencia));
                     actualizado = true;
                 }
