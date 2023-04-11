@@ -15,6 +15,19 @@ namespace Pantallas_Sistema_facturacion
         public frmSeguridad()
         {
             InitializeComponent();
+            fill_EmployeeCombo();
+        }
+
+        private void fill_EmployeeCombo()
+        {
+            DataTable dt = new DataTable();
+            Acceso_datos acceso = new Acceso_datos();
+            dt = acceso.cargarTabla("TBLEMPLEADO", "");
+
+            cboEmployeeSec.DataSource = dt;
+            cboEmployeeSec.DisplayMember = "strNombre";
+            cboEmployeeSec.ValueMember = "IdEmpleado";
+            acceso.CerrarrBd();
         }
     }
 }
