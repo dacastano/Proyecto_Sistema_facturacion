@@ -37,7 +37,7 @@ namespace Pantallas_Sistema_facturacion
             this.txtUsuario = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.lblTitulo = new MaterialSkin.Controls.MaterialLabel();
             this.lblEmpleado = new MaterialSkin.Controls.MaterialLabel();
-            this.cboEmployeeSec = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnSalir
@@ -144,20 +144,20 @@ namespace Pantallas_Sistema_facturacion
             this.lblEmpleado.TabIndex = 33;
             this.lblEmpleado.Text = "Empleado";
             // 
-            // cboEmployeeSec
+            // comboBox1
             // 
-            this.cboEmployeeSec.FormattingEnabled = true;
-            this.cboEmployeeSec.Location = new System.Drawing.Point(175, 114);
-            this.cboEmployeeSec.Name = "cboEmployeeSec";
-            this.cboEmployeeSec.Size = new System.Drawing.Size(251, 21);
-            this.cboEmployeeSec.TabIndex = 34;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(175, 114);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(251, 21);
+            this.comboBox1.TabIndex = 34;
             // 
             // frmSeguridad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(662, 369);
-            this.Controls.Add(this.cboEmployeeSec);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.lblEmpleado);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEliminar);
@@ -183,6 +183,6 @@ namespace Pantallas_Sistema_facturacion
         private MaterialSkin.Controls.MaterialSingleLineTextField txtUsuario;
         private MaterialSkin.Controls.MaterialLabel lblTitulo;
         private MaterialSkin.Controls.MaterialLabel lblEmpleado;
-        private System.Windows.Forms.ComboBox cboEmployeeSec;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

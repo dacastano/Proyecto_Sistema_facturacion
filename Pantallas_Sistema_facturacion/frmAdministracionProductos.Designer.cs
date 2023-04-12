@@ -43,6 +43,7 @@ namespace Pantallas_Sistema_facturacion
             this.txtBxDetallesProducto = new System.Windows.Forms.TextBox();
             this.btnBuscar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnNuevo = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnActualizar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnEliminar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnSalir = new MaterialSkin.Controls.MaterialRaisedButton();
             this.cBxDescripcionCategoria = new System.Windows.Forms.ComboBox();
@@ -235,6 +236,18 @@ namespace Pantallas_Sistema_facturacion
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Depth = 0;
+            this.btnActualizar.Location = new System.Drawing.Point(790, 131);
+            this.btnActualizar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Primary = true;
+            this.btnActualizar.Size = new System.Drawing.Size(103, 32);
+            this.btnActualizar.TabIndex = 14;
+            this.btnActualizar.Text = "Actualizar\r\n(Deprecated)";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            // 
             // btnEliminar
             // 
             this.btnEliminar.Depth = 0;
@@ -373,6 +386,7 @@ namespace Pantallas_Sistema_facturacion
             this.Controls.Add(this.cBxDescripcionCategoria);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBxDetallesProducto);
@@ -409,6 +423,7 @@ namespace Pantallas_Sistema_facturacion
         private System.Windows.Forms.TextBox txtBxDetallesProducto;
         private MaterialSkin.Controls.MaterialRaisedButton btnBuscar;
         private MaterialSkin.Controls.MaterialRaisedButton btnNuevo;
+        private MaterialSkin.Controls.MaterialRaisedButton btnActualizar;
         private MaterialSkin.Controls.MaterialRaisedButton btnEliminar;
         private MaterialSkin.Controls.MaterialRaisedButton btnSalir;
         private System.Windows.Forms.ComboBox cBxDescripcionCategoria;
